@@ -12,7 +12,7 @@ import toast from 'react-hot-toast';
 export default function AdminPatients() {
   const [users, setUsers] = useState<any[]>([]);
   const [search, setSearch] = useState('');
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   useEffect(() => {
     clearTimeout(debounceRef.current);
